@@ -18,24 +18,31 @@ let divided = 100 / squared;
 
 // add block
 let length = (1000 / divided)*(1000 / divided);
-let count = 0;
 for (i = 0; i < length; i++) {
-    // create element
-    count += 1
+
+container.addEventListener('mouseover', function(){});
+    
+// create element
     let block = document.createElement('div')
     block.style.height = `${divided}px`;
     block.style.width = `${divided}px`;
-    block.style.backgroundColor = "green"; 
+    block.style.backgroundColor = "white"; 
     container.append(block);
-    block.addEventListener ('mouseover', function () {
-    block.style.backgroundColor = "black";
+
+// mark mouse over (draw)    
+block.addEventListener ('mouseover', function (e) {
+    //get background color
+    let color = e.clientX
+    let color2 = e.clientY
+    
+    block.style.backgroundColor = `rgb(${color},${color2}, 85)`;
     let btn = document.querySelector('button');
     btn.addEventListener('click', reset);
     function reset() {
-        block.style.backgroundColor ="green";
+        block.style.backgroundColor ="white";
     }
 
-    });
+        });
 }
 //reset function
 }
