@@ -30,7 +30,7 @@ container.addEventListener('mouseover', function(){});
     container.append(block);
 
 // mark mouse over (draw)    
-block.addEventListener ('mouseover', function (e) {
+block.addEventListener ('mouseenter', function (e) {
     //get background color
     let color = e.clientX
     let color2 = e.clientY
